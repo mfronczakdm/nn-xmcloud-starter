@@ -4,11 +4,10 @@ import type { PreviewSearchInitialState } from '@sitecore-search/react';
 import { WidgetDataType, usePreviewSearch, widget } from '@sitecore-search/react';
 import { ArticleCard, PreviewSearch } from '@sitecore-search/ui';
 import React from 'react';
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-import Spinner from './Spinner';
-import SuggestionBlock from './SuggestionBlock';
-
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import Spinner from '../uab/src/components/search/Spinner';
+import SuggestionBlock from '../uab/src/components/search/SuggestionBlock';
 
 const SEARCH_CONFIG = {
   source: process.env.NEXT_PUBLIC_SEARCH_SOURCE as string,
@@ -31,7 +30,11 @@ type PreviewSearchComponentProps = {
 
 type InitialState = PreviewSearchInitialState<'itemsPerPage' | 'suggestionsList'>;
 
-export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsSearchOpen }: PreviewSearchComponentProps) => {
+export const PreviewSearchComponent = ({
+  defaultItemsPerPage = 6,
+  isOpen,
+  setIsSearchOpen,
+}: PreviewSearchComponentProps) => {
   const router = useRouter();
   const {
     actions: { onItemClick, onKeyphraseChange },
@@ -47,12 +50,12 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsS
       itemsPerPage: defaultItemsPerPage,
     },
     query: (query): any => {
-        if (SEARCH_CONFIG.source !== '') {
-            const sources = SEARCH_CONFIG.source.split('|');
-            sources.forEach(source => {
-                query.getRequest().addSource(source.trim());
-            });
-        }
+      if (SEARCH_CONFIG.source !== '') {
+        const sources = SEARCH_CONFIG.source.split('|');
+        sources.forEach((source) => {
+          query.getRequest().addSource(source.trim());
+        });
+      }
     },
   });
 
@@ -62,11 +65,11 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsS
       const target = event.target;
       onKeyphraseChange({ keyphrase: target.value });
     },
-    [onKeyphraseChange],
+    [onKeyphraseChange]
   );
   const handleSubmit = (e: SyntheticEvent): void => {
     e.preventDefault();
-    if (isOpen) setIsSearchOpen(false)
+    if (isOpen) setIsSearchOpen(false);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const target = e.target.query as HTMLInputElement;
@@ -84,16 +87,18 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsS
           placeholder="Search content, grid status..."
         />
       </form>
-      <PreviewSearch.Content
-        className="flex justify-center pt-0 h-[400px] shadow-[2px_5px_5px_5px_rgba(0,0,0,0.3)] transition-opacity	w-[var(--radix-popover-trigger-width)] bg-gray-100 dark:bg-gray-800"
-      >
+      <PreviewSearch.Content className="flex justify-center pt-0 h-[400px] shadow-[2px_5px_5px_5px_rgba(0,0,0,0.3)] transition-opacity	w-[var(--radix-popover-trigger-width)] bg-gray-100 dark:bg-gray-800">
         <Spinner loading={loading} />
 
-        {!loading  &&
+        {!loading && (
           <React.Fragment key="1">
             {articleSuggestions.length > 0 && (
               <PreviewSearch.Suggestions className="block box-border list-none w-[16rem] text-sm">
-                <SuggestionBlock blockId={'title_context_aware'} items={articleSuggestions} title={'Suggestions'} />
+                <SuggestionBlock
+                  blockId={'title_context_aware'}
+                  items={articleSuggestions}
+                  title={'Suggestions'}
+                />
               </PreviewSearch.Suggestions>
             )}
             <PreviewSearch.Results defaultQueryResult={queryResult}>
@@ -105,7 +110,6 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsS
                   <Spinner loading={loading} />
                   {!loading &&
                     articles.map((article, index) => (
-
                       <PreviewSearch.Item key={article.id} asChild>
                         <PreviewSearch.ItemLink
                           href={article.url}
@@ -136,11 +140,15 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsS
               )}
             </PreviewSearch.Results>
           </React.Fragment>
-        }
+        )}
       </PreviewSearch.Content>
     </PreviewSearch.Root>
   );
 };
 
-const PreviewSearchWidget = widget(PreviewSearchComponent, WidgetDataType.PREVIEW_SEARCH, 'content');
+const PreviewSearchWidget = widget(
+  PreviewSearchComponent,
+  WidgetDataType.PREVIEW_SEARCH,
+  'content'
+);
 export default PreviewSearchWidget;
