@@ -11,17 +11,20 @@ import { cn } from 'components/lib/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
 import { useRouter } from 'next/navigation';
-import { usePreviewSearchActions, WidgetDataType, usePreviewSearch, widget } from '@sitecore-search/react';
+import { usePreviewSearchActions, WidgetDataType, usePreviewSearch, widget, FilterEqual, useSearchResults } from '@sitecore-search/react';
 import { PreviewSearch, ArticleCard } from '@sitecore-search/ui';
 import Image from 'next/image';
 import Spinner from 'src/components/search/Spinner';
 import SuggestionBlock from 'src/components/search/SuggestionBlock';
-import { Placeholder, Text, withDatasourceCheck, Link, RichText, Image as Image_8a80e63291fea86e0744df19113dc44bec187216, CdpHelper, useSitecore, DateField } from '@sitecore-content-sdk/nextjs';
+import ArticleCard_d90fd2108f6fd923aa1f7fe8ef4e9a10f3676909 from 'src/components/search/ArticleCard';
+import HomeHighlighted from 'src/components/search/HighlightedArticles';
+import Link from 'next/link';
+import { Placeholder, Text, withDatasourceCheck, Link as Link_8a80e63291fea86e0744df19113dc44bec187216, RichText, Image as Image_8a80e63291fea86e0744df19113dc44bec187216, CdpHelper, useSitecore, DateField } from '@sitecore-content-sdk/nextjs';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Bell, Zap, Facebook, Twitter, Instagram, Linkedin, Youtube, Thermometer, Activity, TrendingUp, TrendingDown, ArrowRight, Calendar, User, Share2, ChevronLeft, Bookmark } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import IconRenderer from '@/helpers/IconRenderer';
-import Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 from 'next/link';
+import PreviewSearch_4de1a796917131c02c1d8f23d3df1bc9d5bbcf97 from 'src/components/search/PreviewSearch';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { AreaChart } from '@/components/charts/AreaChart';
@@ -88,6 +91,8 @@ const importMap = [
       { name: 'WidgetDataType', value: WidgetDataType },
       { name: 'usePreviewSearch', value: usePreviewSearch },
       { name: 'widget', value: widget },
+      { name: 'FilterEqual', value: FilterEqual },
+      { name: 'useSearchResults', value: useSearchResults },
     ]
   },
   {
@@ -116,12 +121,30 @@ const importMap = [
     ]
   },
   {
+    module: 'src/components/search/ArticleCard',
+    exports: [
+      { name: 'default', value: ArticleCard_d90fd2108f6fd923aa1f7fe8ef4e9a10f3676909 },
+    ]
+  },
+  {
+    module: 'src/components/search/HighlightedArticles',
+    exports: [
+      { name: 'default', value: HomeHighlighted },
+    ]
+  },
+  {
+    module: 'next/link',
+    exports: [
+      { name: 'default', value: Link },
+    ]
+  },
+  {
     module: '@sitecore-content-sdk/nextjs',
     exports: [
       { name: 'Placeholder', value: Placeholder },
       { name: 'Text', value: Text },
       { name: 'withDatasourceCheck', value: withDatasourceCheck },
-      { name: 'Link', value: Link },
+      { name: 'Link', value: Link_8a80e63291fea86e0744df19113dc44bec187216 },
       { name: 'RichText', value: RichText },
       { name: 'Image', value: Image_8a80e63291fea86e0744df19113dc44bec187216 },
       { name: 'CdpHelper', value: CdpHelper },
@@ -174,9 +197,9 @@ const importMap = [
     ]
   },
   {
-    module: 'next/link',
+    module: 'src/components/search/PreviewSearch',
     exports: [
-      { name: 'default', value: Link_a258c208ba01265ca0aa9c7abae745cc7141aa63 },
+      { name: 'default', value: PreviewSearch_4de1a796917131c02c1d8f23d3df1bc9d5bbcf97 },
     ]
   },
   {

@@ -52,10 +52,10 @@ SharedFields:
   Value: "{96E5F4BA-A2CF-4A4C-A4E7-64DA88226362}"
 - ID: "d0ce707c-342f-4c02-ac0a-edb21346dde4"
   Hint: SupportedLanguages
-  Value: "{AF584191-45C9-4201-8740-5409F4CF8BDD}|{3AE424E9-43C0-4E11-ACA6-6B514ECDBE11}"
+  Value: af58419145c9420187405409f4cf8bdd|3ae424e943c04e11aca66b514ecdbe11|35c4ee2bb6824521a8eb1750ca359345
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "7b43b3ad-a099-4d72-a76b-f3e9ca92713c"
+  Value: "f5de85e1-a03b-4951-8e81-310d6c9ea668"
 - ID: "e8881464-38af-4655-be4a-ee10586578a2"
   Hint: Templates
   Value: "{DC479622-7000-4F97-A24A-D7A819DF949C}"
@@ -86,11 +86,11 @@ Languages:
         sitecore\johannes.zijlstra@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ebb90aa2-ff97-43fa-956a-7fe6b4dc7833"
+      Value: "1d93294b-ab65-4b86-8c44-9d0fc7646d25"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johannes.zijlstra@sitecore.com
+        sitecore\alexander.sergeev@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250924T131135Z
+      Value: 20250926T084205Z

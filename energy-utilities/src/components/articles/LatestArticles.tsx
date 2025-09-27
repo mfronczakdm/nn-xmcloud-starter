@@ -66,20 +66,20 @@ const LatestArticles = (props: LatestArticlesProps): JSX.Element => {
         {props.fields.items.map((article, index) => (
           <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-video overflow-hidden">
-              <Image field={article.fields.Image}
+              <Image field={article?.fields?.Image}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-3">
-                <Badge variant="outline" className={`text-xs ${getStatusColor(article.fields.Category.fields.displayName)}`}>
-                  {article.fields.Category.fields.displayName}
+                <Badge variant="outline" className={`text-xs ${getStatusColor(article?.fields?.Category?.fields?.displayName)}`}>
+                  {article?.fields?.Category?.fields?.displayName}
                 </Badge>
                 <div className="flex items-center space-x-4 text-xs">
                   <div className="flex items-center space-x-1">
                     <Calendar className="h-3 w-3" />
                     <DateField
-                        field={article.fields.PublishDate}
+                        field={article?.fields?.PublishDate}
                         render={newsDateFormatter}
                       />
                   </div>
@@ -87,19 +87,19 @@ const LatestArticles = (props: LatestArticlesProps): JSX.Element => {
               </div>
 
               <h3 className="font-semibold text-foreground mb-2 text-balance hover:text-primary">
-                <Link href={article.url}><Text field={article.fields.Title} /></Link>
+                <Link href={article?.url}><Text field={article?.fields?.Title} /></Link>
               </h3>
 
-              <p className="text-sm mb-4 leading-relaxed"><Text field={article.fields.Excerpt} /></p>
+              <p className="text-sm mb-4 leading-relaxed"><Text field={article?.fields?.Excerpt} /></p>
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-1 text-xs">
                   <User className="h-3 w-3" />
-                  <span>{article.fields.Author.value}</span>
+                  <span>{article?.fields?.Author?.value}</span>
                 </div>
 
                 <Button variant="ghost" size="sm" asChild>
-                  <Link href={article.url} className="flex items-center space-x-1">
+                  <Link href={article?.url} className="flex items-center space-x-1">
                     <span>Read More</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>

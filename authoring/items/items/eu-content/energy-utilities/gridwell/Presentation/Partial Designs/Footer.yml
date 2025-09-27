@@ -13,7 +13,10 @@ SharedFields:
     <image mediaid="{17928C6C-3E40-4F66-929B-CC3B472FB62C}" />
 - ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
   Hint: __Shared revision
-  Value: "2a32af4b-fb59-4ff4-813e-c7ff26ef8215"
+  Value: "c3bf84b2-0750-4cca-8995-060059dda98b"
+- ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
+  Hint: __Enable item fallback
+  Value: 
 Languages:
 - Language: en
   Versions:
@@ -50,11 +53,11 @@ Languages:
         sitecore\johannes.zijlstra@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "113639bd-be0e-44f6-99a2-eec3f9347536"
+      Value: "ea464b4b-df54-42c7-aaa3-e1d555a9c70b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johannes.zijlstra@sitecore.com
+        sitecore\alexander.sergeev@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250920T211700Z
+      Value: 20250926T083456Z

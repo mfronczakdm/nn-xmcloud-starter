@@ -5,9 +5,15 @@ Template: "5c6a3104-02ca-4d15-941d-03abebd6d9bc"
 Path: "/sitecore/content/energy-utilities/gridwell/Presentation/Partial Designs"
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1ff2243c-be43-47e4-9f1c-8ae782443cc0"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{703ABB6D-BE33-4F9D-97FF-EE1571A14C81}"
+- ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
+  Hint: __Enable item fallback
+  Value: 
 Languages:
 - Language: en
   Versions:
@@ -26,11 +32,11 @@ Languages:
         sitecore\johannes.zijlstra@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "15e13dd3-54f0-4f01-95c8-3293cdbd53c0"
+      Value: "547b0634-99f9-4f67-808f-7606fff2be4d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\johannes.zijlstra@sitecore.com
+        sitecore\alexander.sergeev@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250919T193403Z
+      Value: 20250926T083501Z

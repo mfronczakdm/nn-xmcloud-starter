@@ -11,6 +11,9 @@ import * as badge from 'src/components/ui/badge';
 import * as SuggestionBlock from 'src/components/search/SuggestionBlock';
 import * as Spinner from 'src/components/search/Spinner';
 import * as PreviewSearch from 'src/components/search/PreviewSearch';
+import * as HighlightedArticles from 'src/components/search/HighlightedArticles';
+import * as ArticleRecommender from 'src/components/search/ArticleRecommender';
+import * as ArticleCard from 'src/components/search/ArticleCard';
 import * as PartialDesignDynamicPlaceholder from 'src/components/partial-design-dynamic-placeholder/PartialDesignDynamicPlaceholder';
 import * as QuickActions from 'src/components/page-content/QuickActions';
 import * as Promo from 'src/components/page-content/Promo';
@@ -42,6 +45,9 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['SuggestionBlock', SuggestionBlock],
   ['Spinner', Spinner],
   ['PreviewSearch', PreviewSearch],
+  ['HighlightedArticles', HighlightedArticles],
+  ['ArticleRecommender', ArticleRecommender],
+  ['ArticleCard', ArticleCard],
   ['PartialDesignDynamicPlaceholder', PartialDesignDynamicPlaceholder],
   ['QuickActions', QuickActions],
   ['Promo', Promo],

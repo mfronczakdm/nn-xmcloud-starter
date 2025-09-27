@@ -5,10 +5,16 @@ Template: "e43add4c-eea3-47a1-8271-e64a9fd0a209"
 Path: "/sitecore/content/energy-utilities/gridwell/Home"
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{C5E344D7-91B2-483E-8C37-F9147E7643EB}"
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
     <image mediaid="{A08583D0-319B-4A28-9EC9-BE9FB1F74573}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bbe13567-d748-4081-ab5d-41e6d3805a00"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
@@ -41,8 +47,14 @@ Languages:
               s:par="CSSStyles"
               s:ph="headless-main" />
             <r
-              uid="{176A556E-03B6-4158-8F87-5730B418A992}"
+              uid="{FC1A6812-E7D4-4C2E-8DF2-361DF0EF7333}"
               p:after="r[@uid='{2163BE0E-6D05-4483-8E19-C95E4AAAEAFA}']"
+              s:id="{461095F3-8BB6-48DC-8AD7-5B0FC378D233}"
+              s:par="CSSStyles&amp;RFKID=search_home_highlighted_articles_gridwell"
+              s:ph="headless-main" />
+            <r
+              uid="{176A556E-03B6-4158-8F87-5730B418A992}"
+              p:after="r[@uid='{FC1A6812-E7D4-4C2E-8DF2-361DF0EF7333}']"
               s:ds="d2fc72e5-a1dd-4a8c-9d24-1b0439fe145d"
               s:id="{A039E112-89EB-436D-94E7-33BA86807F25}"
               s:par="CSSStyles"
@@ -72,14 +84,14 @@ Languages:
         sitecore\johannes.zijlstra@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "51ea1263-f162-4bf8-860b-67dacc7c5511"
+      Value: "d25696f3-c526-42be-a228-771767756f5b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\johannes.zijlstra@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250921T152204Z
+      Value: 20250926T202225Z
     - ID: "fec597dd-3b38-4232-a472-83d725de4d8e"
       Hint: Title
       Value: gridwell
